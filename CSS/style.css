@@ -1,5 +1,83 @@
+div {
+/* width: 250px; */
+height: 250px;
+/* border: 2px solid black; */
+background-color: rgb(105, 107, 112);
+
+}
+
+h1 {
+/* padding: 20px; */
+/* border: 2px solid black; */
+}
 * {
-    margin: 0px;
-    padding: 0;
-    box-sizing: border-box;
+    /* font-weight: bold; */
+}
+
+/* p {
+    font-size: 36px;
+} */
+
+/* span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lastPara {
+font-size: 36px;
+} */
+
+/* .kuchBi {
+    font-weight: bold;
+    font-style: italic;
+} */
+
+
+
+/* .about-sec {
+    height: 500px;
+    background-color: lightblue;
+    margin-bottom: 20px;
+} */
+/* #service-sec {
+    height: 500px;
+    background-color: royalblue;
+    margin-bottom: 20px;
+} */
+
+
+/* .meraNewPara {
+background-color: red;
+} */
+
+
+/* #parent > p{
+    background-color: aqua;
+}
+
+#unorderedList-1 > li {
+    background-color: blueviolet;
+}
+
+div > p {
+color: red;
+} */
+
+/* div > .lastPara {
+    font-size: 110px;
+    color: green;
+}
+
+
+#single + p + p + p + p{
+    color: yellow;
+} */
+
+
+h1~p{
+    background-color: yellow;
+}
+
+
+.chotha {
+    background-color: red;
 }
