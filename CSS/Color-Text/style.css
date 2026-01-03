@@ -1,0 +1,108 @@
+/* @font-face {
+  font-family: "jaffer";
+  src: url(fonts/Montserrat/static/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "newJaffer";
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  src: url(fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+   background-color: rgba(0, 0, 0);
+  background-color: cadetblue; 
+  background: #b5748f;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 0.2) 0%, rgba(87, 199, 133, 0.5) 50%, rgba(237, 221, 83, 0.9) 100%);
+  text-align: center;
+  opacity: 0.5; 
+   font-size: 32px;
+} */
+
+/* .heading {
+  font-size: 32px;
+  background-color: rosybrown;
+  font-family: "jaffer";
+  font-size: 32px;
+  font-size: 200%;
+  font-size: 32px;
+
+} */
+/* 
+.box1 {
+  background-color: red;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+.box2 {
+  background-color: blue;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+
+div {
+  font-family: "newJaffer";
+}
+
+#paragraph {
+  font-family: "Montserrat-Italic";
+} */
+
+html {
+    font-size: 100%;
+}
+/* body {
+    font-size: 32px;
+} */
+
+.heading {
+    /* font-size: 200%; */
+}
+div {
+    font-weight: 500;
+    /* font-style: oblique; */
+    /* text-transform: capitalize; */
+    /* text-transform: lowercase; */
+    text-transform: uppercase;
+    /* text-decoration: ; */
+    line-height: 40px;
+    /* background-color: red; */
+    /* letter-spacing: 20px; */
+    /* word-spacing: 20px; */
+    text-align: justify;
+    /* text-indent: 100px; */
+    text-shadow: 4px 4px 2px gray;
+    
+}
+
+/* div::first-letter{
+    font-size: 100px;
+    text-transform: lowercase;
+} */
+div::first-line{
+    font-size: 100px;
+    background-color: yellow;
+    text-transform: lowercase;
+}
+/* 
+a {
+    text-decoration: none;
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  */
