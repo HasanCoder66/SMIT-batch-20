@@ -61,41 +61,41 @@ div {
 } */
 
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 /* body {
     font-size: 32px;
 } */
 
 .heading {
-    /* font-size: 200%; */
+  /* font-size: 200%; */
 }
 div {
-    font-weight: 500;
-    /* font-style: oblique; */
-    /* text-transform: capitalize; */
-    /* text-transform: lowercase; */
-    text-transform: uppercase;
-    /* text-decoration: ; */
-    line-height: 40px;
-    /* background-color: red; */
-    /* letter-spacing: 20px; */
-    /* word-spacing: 20px; */
-    text-align: justify;
-    /* text-indent: 100px; */
-    text-shadow: 4px 4px 2px gray;
-    
+  font-weight: 500;
+  /* font-style: oblique; */
+  /* text-transform: capitalize; */
+  /* text-transform: lowercase; */
+  text-transform: uppercase;
+  /* text-decoration: ; */
+  line-height: 40px;
+  /* background-color: red; */
+  /* letter-spacing: 20px; */
+  /* word-spacing: 20px; */
+  text-align: justify;
+  /* text-indent: 100px; */
+  text-shadow: 4px 4px 2px gray;
 }
 
 /* div::first-letter{
     font-size: 100px;
     text-transform: lowercase;
 } */
-div::first-line{
-    font-size: 100px;
-    background-color: yellow;
-    text-transform: lowercase;
+div::first-line {
+  font-size: 100px;
+  background-color: yellow;
+  text-transform: lowercase;
 }
+
 /* 
 a {
     text-decoration: none;
@@ -106,3 +106,91 @@ a {
   padding: 0;
   box-sizing: border-box;
 }  */
+
+/* p::first-letter {
+background-color: yellow;
+} */
+
+/* p::first-line{
+  background-color: red;
+} */
+
+/* a:link {
+  color: black;
+}
+
+a:visited{
+  color: red;
+} */
+
+#link:link {
+  background-color: black;
+}
+
+#input:hover {
+  background-color: brown;
+}
+
+#input:focus {
+  background-color: aqua;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+button:active {
+  background-color: blue;
+}
+
+p {
+  background-color: yellow;
+  /* height: 150px;
+  width: 150px; */
+  /* max-height: 100px;
+  min-height: 150px; */
+  /* overflow: scroll; */
+  overflow: hidden;
+  /* border: 2px solid black; */
+
+  /* padding: 20px; */
+  /* border-width: 2px;
+  border-style: dashed;
+  border-color: red;
+  border-top-color: blue; */
+  border: 2px dashed cyan;
+  /* padding: 10px 20px 30px 5px; */
+  /* margin: 20px 40px 40px 5px; */
+  /* padding: 20px 40px;
+  margin: 0px; */
+  /* visibility: hidden; */
+}
+
+span {
+  background-color: red;
+  height: 150px;
+}
+
+/* li {
+  display: inline;
+  margin-right: 10px;
+}
+li.coming-soon {
+  visibility: hidden;
+} */
+
+
+
+p {
+  border-image: url("https://images.vexels.com/media/users/3/134180/isolated/lists/b0f06c51849ba9d704d067b4273864f4-star-silhouette-07.png");
+}
+
+
+
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: lightslategray;
+  /* box-shadow: -5px -5px 5px #777777; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  border-radius: 50%;
+}
