@@ -1,0 +1,100 @@
+/* body {
+    background-color: black;
+} */
+
+ ol {
+     list-style-type: decimal-leading-zero;
+     list-style-position: inside;
+    /* list-style-image: url("https://img.freepik.com/free-vector/3d-metal-star-isolated_1308-117760.jpg?semt=ais_hybrid&w=740&q=80"); */
+
+     /* list-style: inside square; */
+}
+
+#category {
+    list-style-type: upper-roman;
+} 
+
+th {
+    /* border: 2px solid black; */
+    /* background-color: aqua; */
+    border-left: 2px solid darkblue;
+    border-right: 2px solid red;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid green;
+
+}
+
+.even {
+    background-color: lightblue;
+
+}
+
+.even:hover {
+    background-color: cadetblue;
+    cursor: pointer;
+    
+}
+
+table th {
+    text-transform: uppercase;
+}
+
+.one, .one td {
+    border: 2px solid black;
+    /* empty-cells: show; */
+    /* border-spacing: 20px; */
+    /* border-collapse: separate; */
+}
+
+body {
+    background-color: rgb(22, 22, 22)
+}
+
+form {
+    width: 250px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #2a2a2a;;
+    margin: auto auto;
+}
+
+label {
+    color: #eaeaea;
+    
+}
+
+#name {
+    margin: 10px 0px;
+    height: 30px;
+    width: 90%;
+     padding-left: 10px;
+}
+
+#name:focus {
+    outline: none;
+}
+
+#name::placeholder {
+    /* font-size: 14px; */
+   
+}
+
+#button {
+    margin: 0 100px;
+    background-color: #2a2a2a;
+}
+
+button {
+    background-color: #5c5959;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    
+}
+
+button:hover {
+    background-color: #eaeaea;
+    cursor: pointer;
+}
