@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+    background-color: #f2f4f7;
+}
+
+.leftBox {
+    width: 600px;
+}
+
+.leftBox img{
+    width: 350px;
+}
+.leftBox p{
+    font-size: 32px;
+    font-family:  Helvetica;
+}
+
+.rightBox {
+    width: 400px;
+    /* height: 400px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.inputEmail,  .inputPassword {
+    margin-bottom:10px ;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.inputEmail input, .inputPassword input {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+
+.inputEmail input:focus, .inputPassword input:focus {
+    outline: none;
+     border: 1px solid #0866ff;
+    border-radius: 5px;
+}
+
+.loginBtn {
+    margin-top:20px ;
+    margin-bottom:20px ;
+    height: 50px;
+    
+}
+
+.loginBtn button {
+    height: 100%;
+    width: 100%;
+    background-color: #0866ff;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.loginBtn button:hover {
+background-color: #0867ffdf;
+}
+
+.rightBox a {
+    text-decoration: none;
+    color: #0867ffdf;
+    text-align: center;
+    font-size: 16px;
+}
+
+.rightBox a:hover {
+text-decoration: underline;
+}
+
+hr {
+    margin-top: 25px;
+}
+
+.registerBtn{
+     margin-top:20px ;
+    margin-bottom:20px ;
+    height: 50px;
+    width: 100%;
+}
+
+.registerBtn button {
+    height: 100%;
+    width: 60%;
+    background-color: #42b72a;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;  
+    margin: 0% 20%; 
+}
+
+.registerBtn button:hover {
+background-color: #40ab2b;
+}
+
+.inputPassword   {
+    position: relative;
+}
+
+.inputPassword i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
