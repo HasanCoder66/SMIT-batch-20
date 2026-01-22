@@ -1,0 +1,50 @@
+/* *{
+
+}
+
+:root {
+    --text-color : #000;
+    --bg-color : #0b0f3e;
+    --dark-mode-text-color : #fff;
+    --dark-mode-bg-color : #ccc;
+ 
+}
+
+
+nav {
+    background-color: var(--primary)}
+
+nav {
+    background-color: var(--dark-mode-bg-color);
+    background-color: #000;
+    color: var(--dark-mode-text-color);
+}
+nav ul li {
+
+} */
+
+
+
+.container {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 200px 400px 100px;
+}
+
+.childrens {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 10px;
+}
+
+.blue {
+    /* border-right: 3px solid blue; */
+    background-color: blue;
+    /* opacity: 0.8; */
+}
+
+.h {
+    height: 400px;
+}
