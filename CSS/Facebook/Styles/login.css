@@ -11,7 +11,7 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-    background-color: #f2f4f7;
+  background-color: #f2f4f7;
 }
 
 .leftBox {
@@ -125,4 +125,46 @@ background-color: #40ab2b;
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+
+@media only screen and (max-width:1100px){
+    .container {
+        padding: 20px;
+        /* gap: 20px; */
+        gap: 0px;
+    }
+}
+
+@media only screen and (max-width:993px){
+    .container {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .leftBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .leftBox p {
+      display: none;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+ .container {
+        gap: 0px;
+    }
+ .leftBox,.rightBox {
+    width: 100%;
+ }
+    .leftBox img{
+    width: 250px;
+
+}
+.inputEmail input, .inputPassword input {
+     font-size: 16px;
+    padding-left: 5px;
+}
 }
