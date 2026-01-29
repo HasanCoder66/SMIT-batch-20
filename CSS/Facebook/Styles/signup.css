@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 20px; */
+  height: 100vh;
+  width: 100%;
+  background-color: #f2f4f7;
+}
+
+.logoBox > img {
+  width: 300px;
+}
+.signupForm {
+  width: 450px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.signupHeader {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.signupHeader p,
+.dob p,
+.gender p,
+.content p {
+  color: gray;
+}
+
+hr {
+  margin-bottom: 15px;
+}
+
+.inputFields {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.firstNameInput input,
+.surNameInput input {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+
+.firstNameInput input:focus,
+.surNameInput input:focus,
+.inputEmail input:focus,
+.inputPassword input:focus {
+  outline: none;
+  border: 1px solid #0866ff;
+  border-radius: 5px;
+}
+
+.dob {
+  margin-bottom: 15px;
+}
+
+.dob p,
+.gender p,
+.content p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.dobBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date select,
+.month select,
+.year select {
+  width: 120px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+
+.genderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.female,
+.male,
+.other {
+  width: 120px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+
+.inputEmail input,
+.inputPassword input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 11px;
+}
+
+.registerBtn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 100%;
+}
+
+.registerBtn button {
+  height: 100%;
+  width: 60%;
+  background-color: #42b72a;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0% 20%;
+}
+
+.registerBtn button:hover {
+  background-color: #40ab2b;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+a p {
+  color: #0866ff;
+}
+
+@media only screen and (max-width: 500px) {
+  .logoBox > img {
+    width: 200px;
+  }
+  .signupForm {
+    width: 100%;
+  }
+  .inputFields, .genderContainer, .dobBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .firstNameInput input,
+  .surNameInput input {
+    padding: 12px 10px;
+  }
+}
+
+
+@media only screen and (max-width:376px) {
+    .firstNameInput input,
+  .surNameInput input {
+  width: 150px;
+  }
+
+.dobBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  .date select,
+.month select,
+.year select {
+  width: 100px;
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 14px;
+}
+}
