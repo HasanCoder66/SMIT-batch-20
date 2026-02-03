@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    /* background-color: red; */
+    height: 10vh;
+}
+
+.bg {
+    background-color: orange;
+}
+
+.merapiyarasacontainer {
+    width: 500px;
+}
+
+/* @media only screen and (max-width:500px){
+    .merapiyarasacontainer {
+        width: 100%;
+    }
+} */
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.bg{
+    background-color: red;
+}
+
+.navbar {
+    /* background-color: black!important; */
+}
+
+#carouselExample {
+   height: 91vh!important;
+    /* background-color: red!important; */
+}
+
+.carousel-inner {
+     height: 100%!important;
+    width: 100%!important;
+}
+.carousel-item img{
+    height: 100%!important;
+    width: 100%!important;
+    /* background-size: contain; */
+    /* object-fit: cover!important; */
+    /* background-size: cover!important; */
+    /* background-size: contain!important; */
+}
+
+
+
+@media only screen and (max-width:500px){
+.parent {
+    justify-content: center;
+}
+}
