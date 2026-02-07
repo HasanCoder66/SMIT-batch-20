@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: blue;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    /* transition: all 2s; */
+}
+
+/* button:hover {
+    background-color: red;
+    color: white;
+    transform: rotate(360deg) skew(20deg) translate(20px , 50px);
+    
+} */
+
+/* transform: skew(20deg); */
+    /* transform: translate(20px, 40px); */
+    /* transform: translateX(-40px); */
+    /* transform: scale(1.2); */
