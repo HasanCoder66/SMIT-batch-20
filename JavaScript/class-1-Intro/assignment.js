@@ -6,4 +6,4 @@
 
 
 // Question #2
-alert("Welcome to Js Land! \n kuch bi")
+// alert("Welcome to Js Land! \n kuch bi")
