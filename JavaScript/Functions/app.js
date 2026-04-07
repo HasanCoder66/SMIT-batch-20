@@ -1,5 +1,14 @@
 // Functions ==> ?
+var a = "ali"
 
+// if(true){ // scope
+// }
+
+function foo (){
+    var a = "ali"
+}
+
+console.log(a)
 
 
 // function sum (){
@@ -95,6 +104,13 @@
 // console.log(pushReturnVal + 6)
 
 
+function abc (){
+    console.log(a)
+}
+
+abc()
+
+
 let paragraph = document.getElementById("showPass")
 console.log(paragraph)
 let passCharacters = "@#$%^&*()ASDFjklgasdfGHJ45asdafd465KLQWER12345TYU"
@@ -112,3 +128,5 @@ paragraph.innerHTML = password
 }
 
 // randomGeneratePassword()
+
+
