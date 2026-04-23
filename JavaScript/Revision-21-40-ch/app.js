@@ -69,14 +69,111 @@ let paragraph = "My name is hasan ashraf. hasan"
 let current = new Date()
 let current2 = Date.now()
 
-console.log(current2 , "current 2 ==>")
+// console.log(current2 , "current 2 ==>")
+
 let days = ["", "", "سئے شمبے"]
 let months = ["jan", "feb","mar","اپریل"]
 
-console.log(months[current.getMonth()])
-
-console.log(days[current.getDay()])
+// console.log(months[current.getMonth()])
+// 
+// console.log(days[current.getDay()])
 // console.log(current.toString().slice(0,15))
 // console.log(current.slice (0,15))
 
 // console.log(current.getTime())
+
+
+// Revision 31 to 40
+
+
+
+// console.log( current.toString().slice(0,15))
+
+// let dob = new Date(2008, 8, 19, 19, 15, 6)
+// let current3 = new Date()
+
+// dob.setHours(12)
+// dob.setMinutes(12)
+// dob.setSeconds(12)
+// dob.setFullYear(2008)
+// dob.setMonth(8)
+// dob.setDate(19)
+// console.log(current3.getFullYear() - dob.getFullYear())
+// console.log(dob)
+
+
+
+
+// function keyword | function name | function parenthesis | function scope | curly brackets | block
+
+// let n1 = 12;
+// let n2 = 12;
+
+// console.log(n1 + n2)
+
+// function normal () {
+//     console.log("hello world")
+// }
+
+
+// normal ()
+
+
+// arguements --> esi jagah jahan sai values bheji jayegi...
+// parameters --> esi jagah jahan values recieve ki jayegi...
+
+
+            // parameters a = 12, b = 12
+function sum (a, b) {
+    console.log(a + b)
+}
+
+sum(12,12) // arguements 12 ,12
+sum(12,12) // arguements 12 ,12
+
+
+
+let user = false;
+let userEmail = "codermhasan@gmail.com"
+let userPass = "12345678"
+
+
+let correctEmail = "codermhasan@gmail.com"
+let correctPass = "12345678"
+// let userEmail
+// let userPass
+
+function login (email, password) {
+    // console.log(userPass)
+if(!email || !password){
+return alert("all fields are required!")
+}
+
+if(userEmail == email && userPass == password){
+    user = true
+}
+
+if(!user){
+    return
+}
+
+if(user) {
+    alert("user login successfully!")
+
+    window.location.href = "dashboard.html"
+}
+console.log(user)
+
+
+console.log("login handler working -->")
+
+}
+
+function logout () {
+    user = false
+
+    console.log(user)
+    if(!user){
+        window.location.href = "index.html"
+    }
+}
