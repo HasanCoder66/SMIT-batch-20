@@ -18,16 +18,16 @@
         <!-- Login Form -->
         <div class="rightBox">
             <div class="inputEmail">
-                <input type="email" required placeholder="Enter Your Email here...">
+                <input type="email" required placeholder="Enter Your Email here..." id="inputEmail">
             </div>
             <div class="inputPassword">
-                <input type="password" required placeholder="Enter Your Password here...">
+                <input type="password" id="inputPassword" required placeholder="Enter Your Password here...">
                 <i class="fa-solid fa-eye"></i>
             </div>
 
             <div class="loginBtn">
-                <a href="">
-                    <button>Log in</button>
+                <a href="Javascript:void(0)"  onclick="loginHandler()">
+                    <button >Log in</button>
                 </a>
             </div>
 
@@ -42,5 +42,7 @@
             </div>
         </div>
     </div>
+
+    <script src="../Js/login.js"></script>
 </body>
 </html>
