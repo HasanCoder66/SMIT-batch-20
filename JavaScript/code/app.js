@@ -1,4 +1,31 @@
-// 30-04-2024 End ===>
+// 02-05-2026 Start ===>
+
+    // Dcument Object Model (DOM) ==>
+
+    // DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+    let doc = document
+
+    console.log(doc.childNodes[1].childNodes)
+
+
+    // let arr = [12, 34]
+
+    // console.log(arr[0])
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 30-04-2026 Start ===>
 
     // Chapter 52 onwards 
 
@@ -28,11 +55,11 @@
 
 
 
-let btn = document.getElementById("btn")
-let clickBtn = document.getElementById("click")
-let allPTags = document.getElementsByTagName("p")
-console.log(allPTags)
-    function noneFn() {
+// let btn = document.getElementById("btn")
+// let clickBtn = document.getElementById("click")
+// let allPTags = document.getElementsByTagName("p")
+// console.log(allPTags)
+//     function noneFn() {
         
         // console.log("Before ==> class",image.className)
         // image.className += " hidden"
@@ -49,14 +76,14 @@ console.log(allPTags)
 
             // btn.classList.add("hidden")
             // clickBtn.classList.remove("hidden")
-            allPTags[2].style.backgroundColor = "#6851ff"
-            allPTags[2].style.color = "#fff"
+            // allPTags[2].style.backgroundColor = "#6851ff"
+            // allPTags[2].style.color = "#fff"
             // allPTags[2].innerHTML = `<h1>jani</h1>`
-    }
+    // }
 
 
 
-// 30-04-2024 End ===>
+// 30-04-2026 End ===>
 
 
 
