@@ -23,10 +23,10 @@
 
             <div class="inputFields">
                 <div class="firstNameInput">
-                    <input type="text" placeholder="Enter Your Name">
+                    <input type="text" placeholder="Enter Your Name" id="firstName">
                 </div>
                 <div class="surNameInput">
-                    <input type="text" placeholder="Enter Your Last Name">
+                    <input type="text" placeholder="Enter Your Last Name" id="lastName">
                 </div>
             </div>
 
@@ -34,7 +34,7 @@
                 <p>Date of birth ?</p>
                 <div class="dobBox">
                     <div class="date">
-                        <select name="date">
+                        <select name="date" id="date">
                             <option value="01">1</option>
                             <option value="02">2</option>
                             <option value="03">3</option>
@@ -69,7 +69,7 @@
                         </select>
                     </div>
                     <div class="month">
-                        <select name="month">
+                        <select name="month" id="month">
                             <option value="01">January</option>
                             <option value="02">February</option>
                             <option value="03">March</option>
@@ -85,7 +85,7 @@
                         </select>
                     </div>
                     <div class="year">
-                        <select name="year">
+                        <select name="year" id="year">
                             <option value="2050">2050</option>
                             <option value="2049">2049</option>
                             <option value="2048">2048</option>
@@ -248,25 +248,25 @@
                <div class="genderContainer">
                  <div class="female">
                     Female
-                    <input name="gender" type="radio">
+                    <input name="gender" value="female" type="radio">
                 </div>
                 <div class="male">
                     Male
-                    <input name="gender" type="radio">
+                    <input name="gender" value="male" type="radio">
                 </div>
                 <div class="other">
                     Other
-                    <input name="gender" type="radio">
+                    <input name="gender" value="other" type="radio">
                 </div>
                </div>
             </div>
 
-            <div class="input name="gender"">
+            <div class="input" >
                  <div class="inputEmail">
-                <input type="email" required placeholder="Enter Your Email here...">
+                <input type="email" required placeholder="Enter Your Email here..." id="email">
             </div>
             <div class="inputPassword">
-                <input type="password" required placeholder="Enter Your Password here...">
+                <input type="password" required placeholder="Enter Your Password here..." id="password">
                 <i class="fa-solid fa-eye"></i>
             </div>
             </div>
@@ -277,7 +277,7 @@
             </div>
 
             <div class="registerBtn">
-                <a href="signup.html">
+                <a href="signup.html"  onclick="signupHandler(event)">
                     <button>Sign up</button>
                 </a>
             </div>
@@ -286,6 +286,8 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../Js/signup.js"></script>
 </body>
 
 </html>
