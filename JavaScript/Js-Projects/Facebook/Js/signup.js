@@ -19,7 +19,8 @@ function signupHandler(e) {
     e.preventDefault()
     user.firstName = firstName.value
     user.lastName = lastName.value
-    user.dob = `${date.value}-${month.value}-${year.value}`
+    // user.dob = `${date.value}-${month.value}-${year.value}`
+    user.dob = date.value +"-"+ month.value+"-"+year.value
     user.email = email.value
     user.password = password.value
 
@@ -44,8 +45,23 @@ function signupHandler(e) {
 
 
 allUsers.push(user)
+firstName.value = ""
+lastName.value = ""
+// date.value = ""
+// month.value = ""
+// year.value = ""
+email.value = ""
+password.value = ""
+
+for (let i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+        gender[i].checked = false;
+    }
+}
+
+// window.location.reload()
     sweety("success", "Ok", "signup successfully")
-    console.log(allUsers)
+    // console.log(allUsers)
 }
 
 
