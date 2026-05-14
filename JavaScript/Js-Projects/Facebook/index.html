@@ -127,10 +127,12 @@
 
         </div>
 
-       <!-- stories -->
+        <!-- stories -->
         <div class="stories-section d-flex gap-2">
           <div class="stories-cards">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/008/442/086/small/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg"  height="100px" width="50px">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/008/442/086/small/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg"
+              height="100px" width="50px">
             <div class="round-box bg-primary">
               <i class="fa-solid fa-plus fs-5 text-white "></i>
             </div>
@@ -140,6 +142,16 @@
           <div class="stories-cards"></div>
 
         </div>
+
+
+        <!-- postContainer -->
+
+        <div class="postContainer">
+         
+
+        </div>
+
+
       </div>
 
       <!-- Modal  -->
@@ -151,15 +163,21 @@
         <div class=" modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a Post</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              ...
+              <div class="descriptionArea">
+
+                <input type="text" placeholder="Enter your description" id="description">
+              </div>
+              <div class="file">
+                <input type="file" id="file">
+              </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+              <button type="button" class="btn btn-primary" onclick="postHandler()">Post</button>
             </div>
           </div>
         </div>
@@ -200,6 +218,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+    <script src="Js/dashboard.js"></script>
 </body>
 
 </html>
