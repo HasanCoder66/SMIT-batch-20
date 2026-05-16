@@ -1,5 +1,7 @@
 let email = document.getElementById("inputEmail")
 let password = document.getElementById("inputPassword")
+let eyeIcon = document.querySelector(".fa-solid")
+
 
 
 let dummyUsers = [
@@ -42,6 +44,8 @@ function loginHandler () {
 
             if(isEmailExist && dummyUsers[i].password == password.value){
                 currentUser = dummyUsers[i]
+                console.log("current user -->",currentUser);
+                
                 break;
             }
         }
@@ -85,4 +89,20 @@ function sweety (icon,title,text) {
       title,
       text,
     });
+    }
+
+
+    function toggleEye (){
+        // console.log("toggle eye function chlaaa -->", password.type)
+        if(password.type == "password"){
+            password.type = "text"
+           eyeIcon.className = "fa-solid fa-eye-slash"
+           return
+        }
+
+        if(password.type =="text"){
+            password.type = "password"
+           eyeIcon.className = "fa-solid fa-eye"
+           return
+        }
     }

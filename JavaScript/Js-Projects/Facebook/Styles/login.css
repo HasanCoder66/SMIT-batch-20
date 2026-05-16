@@ -55,6 +55,10 @@
     border-radius: 5px;
 }
 
+.hidden {
+    display: none;
+}
+
 .loginBtn {
     margin-top:20px ;
     margin-bottom:20px ;

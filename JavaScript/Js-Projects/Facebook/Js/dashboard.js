@@ -3,18 +3,27 @@ let postContainer = document.querySelector(".postContainer");
 let description = document.getElementById("description")
 let image = document.getElementById("file")
 
-
-
+let currentUser = {
+        fullName : "abdul wahid",
+        email:"abdulwahid12348@gmail.com",
+        password : "12345678"
+    }
 
 function postHandler () {
 
     const file = image.files[0] 
-    const imageUrl = URL.createObjectURL(file)
 
-    console.log(imageUrl);
+    if(file){
+
+      var imageUrl = URL.createObjectURL(file) 
+  
+      console.log(imageUrl);
+    }
+
+    console.log("mera post handler chlaa -->")
     
 
-    postContainer.innerHTML = `<!-- single post -->
+    postContainer.innerHTML += `<!-- single post -->
     <div class="post mb-4">
     
       <!-- post header -->
@@ -34,11 +43,6 @@ function postHandler () {
       </div>
     
     
-    
-    
-    
-    
-    
       <!-- post Description -->
       <div class="postDescription text-start  px-4">
         <p class="mb-2 mt-4">${description.value}</p>
@@ -46,7 +50,7 @@ function postHandler () {
       </div>
     
       <!-- postImage -->
-      <div class="postImage bg-warning">
+      <div class= ${imageUrl ? 'postImage' : "hidden"} >
         <img
           src=${imageUrl}
           alt="">
@@ -75,8 +79,26 @@ function postHandler () {
       </div>
     
     </div>`
+
+    description.value = ""
+    image.value = ''
 }
 
+
+
+function logoutHandler (){
+console.log("mera logout handler chlaa -->");
+
+
+currentUser = null;
+
+console.log("mery dashboard mai current user -->",currentUser);
+
+if(!currentUser){
+  window.location.href = "../Pages/login.html"
+}
+
+}
 
 
 
