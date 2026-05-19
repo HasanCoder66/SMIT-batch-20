@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Generator Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <div class="container-fluid">
+    <h1 class="text-center banner">Student Card Generator</h1>
+
+    <div class=" parentContainer">
+
+        <div class="studentForm ">
+            <h1 class="text-center mt-2">Student Form</h1>
+
+            <div id="card" class="mt-2">
+
+                <!-- full name -->
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Enter your full name</label>
+                    <input type="text" id="disabledTextInput" class="form-control fullName" placeholder="Full name">
+                  </div>
+
+
+                <!-- Cnic -->
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Enter your cnic</label>
+                    <input type="text" id="disabledTextInput" class="form-control cnic" placeholder="Cnic">
+                  </div>
+
+
+                    <!-- select your course -->
+                    <div class="mb-3">
+                        <label for="disabledSelect" class="form-label">Select your course</label>
+                        <select id="disabledSelect" class="form-select course">
+                          <option selected disabled>Select your course</option>
+                          <option>Web Development course</option>
+                          <option>App Development course</option>
+                          <option>AI & Machine Learning</option>
+                          <option>Devops Engineer</option>
+                        </select>
+                      </div>
+
+
+              <!-- select your campus -->
+                  <div class="mb-3">
+                    <label for="disabledSelect" class="form-label">Select your campus</label>
+                    <select id="disabledSelect" class="form-select campus">
+                      <option selected disabled>Select your campus</option>
+                      <option>Bahadurabad Campus</option>
+                      <option>Zaitoon Ashraf IT park Campus</option>
+                      <option>Gulshan Campus</option>
+                      <option>Zamzama Campus</option>
+                    </select>
+                  </div>
+
+                  <!-- image dedoo  -->
+
+                  <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Upload Image</label>
+                    <input type="file" id="disabledTextInput" class="form-control image">
+                  </div>
+
+                  <button onclick="generateIdCard()" type="submit" class="btn btn-primary">Generate Id Card</button>
+
+            </div>
+          
+        </div>
+     
+
+       <div id="cardParent" >
+        
+       </div>
+
+    </div>
+
+   </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>
