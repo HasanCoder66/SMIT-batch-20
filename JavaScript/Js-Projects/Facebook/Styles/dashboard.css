@@ -106,12 +106,16 @@ nav {
     font-weight: bold;
    margin-top: 5px;
 }
-.leftSidebar div:hover, .chats div:hover {
+.leftSidebar div:hover {
+    background-color: rgb(163, 159, 159);
+    transition: all 0.5s;
+}
+.chats > #chattu >div:hover {
     background-color: rgb(163, 159, 159);
     transition: all 0.5s;
 }
 
-.leftSidebar div img, .chats div img , .topHeader div img {
+.leftSidebar div img, .chats > #chattu img , .topHeader div img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -322,3 +326,24 @@ color: black;
     width: 150px;
   }
 }
+
+
+
+/* chatss */
+
+#chattu {
+  position: relative;
+}
+
+#online{
+  position: absolute;
+  left: 55px;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: green;
+  border: 2px solid white;
+
+}
+

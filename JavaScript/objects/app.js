@@ -1,5 +1,27 @@
 // console.log("js is running -->");
 
+    let students = [
+        {
+            id: 1,
+            name : "sufiyan",
+            fatherName  : "shahid",
+            skills : ["HTML", "CSS", "Javacript", "Advanced Javascript", "Tailwind", "React", "Github", "Bootstrap"],
+            campus: "bahadurabad head office",
+            course:"web and app development",
+            timings : "07:00 PM to 09:00 PM"
+        },
+        {
+            id: 2,
+            name : "hassan",
+            fatherName  : "rizwan",
+            skills : ["HTML", "CSS", "Javacript",  "Github", "Bootstrap"],
+            campus: "bahadurabad head office",
+            course:"web and app development",
+            timings : "09:00 AM to 11:00 AM"
+        },
+    ]
+
+
 
 
 // let userObj = {
