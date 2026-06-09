@@ -109,26 +109,26 @@ let usersArr = [
 
 
 
-function Student (name){
-    this.stu = name
-    this.printStuName = function (){
-console.log(this.stu);
+// function Student (name){
+//     this.stu = name
+//     this.printStuName = function (){
+// console.log(this.stu);
 
-const studentName = this.stu
+// const studentName = this.stu
 
-if(!studentName.trim()){
-    console.log("please enter a name");
+// if(!studentName.trim()){
+//     console.log("please enter a name");
     
-}
+// }
 
 
-    }
-}
+//     }
+// }
 
 
 
-let s1 = new Student("")
+// let s1 = new Student("")
 
-console.log(s1);
+// console.log(s1);
 
-s1.printStuName()
+// s1.printStuName()
