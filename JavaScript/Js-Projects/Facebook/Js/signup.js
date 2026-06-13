@@ -8,7 +8,10 @@ let password = document.getElementById("password")
 let gender = document.getElementsByName("gender")
 
 
-let allUsers = []
+let allUsers = JSON.parse(localStorage.getItem("allUsers")) || [] 
+console.log(allUsers);
+
+// let allUsers = [] 
 let user = {}
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
@@ -45,6 +48,9 @@ function signupHandler(e) {
 
 
 allUsers.push(user)
+
+localStorage.setItem("allUsers", JSON.stringify(allUsers));
+
 firstName.value = ""
 lastName.value = ""
 // date.value = ""
