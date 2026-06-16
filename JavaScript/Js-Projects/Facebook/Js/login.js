@@ -4,30 +4,37 @@ let eyeIcon = document.querySelector(".fa-solid")
 
 
 
-let dummyUsers = [
+// let dummyUsers = [
 
-    {
-        fullName : "abdul wahi",
-        email:"abdulwahid12348@gmail.com",
-        password : "12345678"
-    },
-    {
-        fullName : "fayyan hussain",
-        email:"fayyanhr@gmail.com",
-        password : "qwertyuiop"
-    },
-    {
-        fullName : "umair",
-        email:"umair@gmail.com",
-        password : "12345678"
-    },
+//     {
+//         fullName : "abdul wahi",
+//         email:"abdulwahid12348@gmail.com",
+//         password : "12345678"
+//     },
+//     {
+//         fullName : "fayyan hussain",
+//         email:"fayyanhr@gmail.com",
+//         password : "qwertyuiop"
+//     },
+//     {
+//         fullName : "umair",
+//         email:"umair@gmail.com",
+//         password : "12345678"
+//     },
     
 
-]
+// ]
+
+let allUsers = JSON.parse(localStorage.getItem("allUsers"))
+let currentUser = null;
+
+localStorage.setItem("currentUser" , JSON.stringify(currentUser))
+// console.log(allUsers);
+
 
 function loginHandler () {
     let isEmailExist = null;
-    let currentUser = null;
+    
     console.log("login handler chlaaa ==>")
 
     if(!email.value.trim() || !password.value.trim()){
@@ -35,16 +42,17 @@ function loginHandler () {
     }
        // authenticate
 
-    for(let i = 0; i < dummyUsers.length; i++){
+    for(let i = 0; i < allUsers.length; i++){
         
         // console.log(dummyUsers[i].email == email.value);
-        if(dummyUsers[i].email == email.value){
-            console.log(dummyUsers[i].email == email.value);
+        if(allUsers[i].email == email.value){
+            console.log(allUsers[i].email == email.value);
             isEmailExist = true
 
-            if(isEmailExist && dummyUsers[i].password == password.value){
-                currentUser = dummyUsers[i]
+            if(isEmailExist && allUsers[i].password == password.value){
+                currentUser = allUsers[i]
                 console.log("current user -->",currentUser);
+                localStorage.setItem("currentUser", JSON.stringify(currentUser))
                 
                 break;
             }
@@ -58,7 +66,7 @@ function loginHandler () {
 
 
      if(currentUser){
-        console.log("fayyan bhii",currentUser);
+        // console.log("fayyan bhii",currentUser);
          sweety("success", "Okay", "User logged in successfully!")
        
          setTimeout(() => {

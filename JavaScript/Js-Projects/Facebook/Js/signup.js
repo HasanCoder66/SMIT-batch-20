@@ -11,8 +11,10 @@ let gender = document.getElementsByName("gender")
 let allUsers = JSON.parse(localStorage.getItem("allUsers")) || [] 
 console.log(allUsers);
 
-// let allUsers = [] 
 let user = {}
+// let allUsers = [] 
+// console.log(allUsers);
+
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 
@@ -47,9 +49,12 @@ function signupHandler(e) {
     }
 
 
+// console.log("current user milaa -->",user);
+    
 allUsers.push(user)
-
 localStorage.setItem("allUsers", JSON.stringify(allUsers));
+window.location.reload()
+// console.log("all users -->", allUsers);
 
 firstName.value = ""
 lastName.value = ""
@@ -65,7 +70,9 @@ for (let i = 0; i < gender.length; i++) {
     }
 }
 
-// window.location.reload()
+
+
+// 
     sweety("success", "Ok", "signup successfully")
     // console.log(allUsers)
 }

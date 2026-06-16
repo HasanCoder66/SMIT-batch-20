@@ -10,11 +10,15 @@ let chats = document.querySelector(".chats")
 let friendsChats = document.getElementById("chattu")
 let onlineIcon = document.querySelector(".online")
 
+
+// current user -->
+let currentUser = JSON.parse(localStorage.getItem("currentUser"))
+
 // dummy data..
 
 let groupsAndPages = [
   {
-    title: 'Muhammad Hasan',
+    title: `${currentUser.firstName} ${currentUser.lastName}`,
     img: "https://avatars.githubusercontent.com/u/140997677?v=4"
   },
   {
@@ -86,11 +90,13 @@ let friends = [
   },
 ]
 
-let currentUser = {
-        fullName : "abdul wahid",
-        email:"abdulwahid12348@gmail.com",
-        password : "12345678"
-    }
+// let currentUser = {
+//         fullName : "abdul wahid",
+//         email:"abdulwahid12348@gmail.com",
+//         password : "12345678"
+//     }
+
+
 
 function postHandler () {
 
@@ -203,11 +209,12 @@ function logoutHandler (){
 console.log("mera logout handler chlaa -->");
 
 
-currentUser = null;
+let isUserValid =  localStorage.setItem("currentUser" , JSON.stringify(null));
+
 
 console.log("mery dashboard mai current user -->",currentUser);
 
-if(!currentUser){
+if(!isUserValid){
   window.location.href = "../Pages/login.html"
 }
 
