@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+    body {
+        background-color: #2a2a2a;
+        color: white;
+    }
+
+    .card{
+        background-color: #313134;
+    }
+   </style>
+</head>
+<body>
+    <div class="">
+        <h1 class="font-bold text-3xl text-center">Resturant Menu</h1>
+
+        <nav class="parent-btns-searchBox shadow p-4 flex justify-between">
+            <div class="btnsParent">
+                <button id="all" class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer">All</button>
+                <button id="lunch" class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer">Lunch</button>
+                <button id="breakfast" class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer">Breakfast</button>
+                <button id="beverages" class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer">Beverages</button>
+            </div>
+            <div class="searchParent  w-[350px] p-2">
+
+                <input type="text" placeholder="Search Items..." class="border-yellow-500 border-1 h-[40px] w-[60%] rounded pl-3" id="input">
+
+                <button class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer" id="searchBtn">Search</button>
+            </div>
+        </nav>
+
+        <div class="cardParent flex flex-wrap gap-5 justify-evenly">
+            <!-- <div class="card  w-[300px] shadow rounded p-4 mt-3 mb-3">
+               <div class="imageParent  h-[200px] w-full rounded">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiQq231csBaXFsLuDcKYWbOQxN2XuCfgVDHgh7f9hnqHgVgbEG3qioWWE&s=10" alt="" class="h-full  w-full object-contain ">
+               </div>
+                <h3 class="font-bold text-2xl">Biryani</h3>
+                <p class="font-semibold text-gray-500">allah wali biryaniiii</p>
+                <button class="py-2 px-6 bg-yellow-400 rounded font-bold cursor-pointer">250</button>
+            </div> -->
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="app.js"></script>
+</body>
+</html>
