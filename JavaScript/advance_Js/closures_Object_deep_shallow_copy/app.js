@@ -1,4 +1,211 @@
-console.log("js is running -->");
+// console.log("js is running -->");
+
+// Set -->
+
+// let mySet = new Set()
+
+// mySet.add(20)
+// mySet.add(40)
+// mySet.add(20)
+
+// mySet.delete(20)
+// mySet.clear()
+
+// console.log(mySet);
+
+// console.log(mySet.size);
+
+
+// let fruits = ["apple", "apple", "mango", "orange"]
+
+// let userSameAges = [18,18, 23, 55, 55]
+
+// // let returnSet = [...new Set(fruits)]
+// let returnSet =new Set(fruits)
+// console.log(returnSet);
+
+
+// let withoutDuplicateFruitsArr = [...new Set(fruits)]
+
+// let withoutDuplicateUserAges = [...new Set(userSameAges)]
+// console.log(withoutDuplicateUserAges);
+
+
+
+// let name = 23
+// let myMap = new Map();
+
+
+// myMap.set("name", "hasan")
+// myMap.set(() => {}, "mera arrow function...")
+// myMap.set("() => {}", "mera dosra arrow function...")
+// // console.log(myMap.get("() => {}"));
+
+// myMap.delete("name")
+// myMap.clear()
+
+
+
+
+
+// console.log(myMap.size);
+// console.log(myMap);
+
+
+// let num = 90;
+
+
+// let anotherNum  = num;
+
+// num = 100
+// console.log(num);
+// console.log(anotherNum);
+
+
+// let mobile = {
+//     name :"iphone",
+//     colors: ["black", "blue", "orange"],
+//     price: 150,
+//     model : "17 pro max",
+//     spces : {
+//         ram : "8gb",
+//         rom : "256gb"
+//     }
+// }
+
+
+// console.log(Object.keys(mobile));
+// console.log(Object.values(mobile));
+// console.log(Object.entries(mobile));
+// console.log(Object.hasOwn(mobile, "description"));
+// console.log(Object.freeze(mobile));
+// console.log(Object.seal(mobile));
+
+
+
+
+// mobile.name = "samsung"
+// mobile.description = "acha wala mobile........"
+
+
+// console.log(mobile);
+
+
+
+// let userObj = {
+//     age : 23,
+//     name : "jaani",
+//     address : {
+//         city : "lahore"
+//     }
+// }
+
+// let user = userObj
+
+// shallow copy -->
+
+// spread operator
+// let user = {...userObj}
+
+// object.assign
+// let user = Object.assign({}, userObj)
+
+
+// user.age = 13;
+// user.name= "hasan"
+// user.address.city = "karachi";
+
+
+// console.log("user object -->", userObj);
+// console.log("user 2 object -->",user);
+
+
+// deepCopy ==>
+
+    // structuredClone 
+    // JSON.parse(JSON.stringify(obj ))
+
+
+// let deepCopy = JSON.parse(JSON.stringify(userObj))
+// let deepCopy = structuredClone(userObj)
+
+
+// deepCopy.age = 25;
+// deepCopy.address.city = "Multan"
+
+// console.log(deepCopy);
+// console.log(userObj);
+
+
+
+
+
+
+// let Closures = document.getElementById("Closures")
+// let btn = document.getElementById("btn")
+// let btn2 = document.getElementById("btn2")
+
+
+// function makeSize (size){
+//     return function (){
+//          Closures.style.fontSize = `${size}px`
+//     }
+// }
+
+// const size10 = makeSize(10)
+// const size30 = makeSize(30)
+
+
+// btn.addEventListener("click", size10)
+// btn2.addEventListener("click", size30)
+
+// Closures -->
+
+// let count = 236
+
+// function outer (){
+//     let count = 23
+    
+    
+//     function inner(){
+//         // let count = 12;
+//         console.log(count);
+
+//     }
+
+//     inner()
+    
+
+
+// }
+
+
+// outer()
+
+
+
+// function outer (){
+// let count = 0;
+
+//     function increment (){
+//         count++
+//         console.log(count);
+        
+//     }
+
+//     return increment
+// }
+
+// const counter = outer()
+
+// counter()
+// counter()
+// counter()
+
+
+
+
+
 
 
 // Map | Set
@@ -115,8 +322,8 @@ let obj = {
 
 
 
-    console.log("new object ->", user2);
-    console.log("old object ->", obj);
+    // console.log("new object ->", user2);
+    // console.log("old object ->", obj);
     
 
 
