@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100">
+
+    <!-- Container -->
+    <div class="max-w-6xl mx-auto p-6">
+
+        <!-- Product Card -->
+        <div class="bg-white rounded-xl shadow-lg p-6 grid md:grid-cols-2 gap-10">
+
+            <!-- Left Side -->
+            <div>
+
+                <!-- Main Image -->
+                <img id="mainImage"
+                    src="https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp"
+                    class="w-full h-[420px] object-contain border rounded-lg p-4 bg-gray-50">
+
+                <!-- Thumbnails -->
+                <div class="flex gap-3 mt-4">
+
+                    <img src="https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp"
+                        class="thumb w-20 h-20 object-contain border rounded cursor-pointer p-2">
+
+                    <img src="https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp"
+                        class="thumb w-20 h-20 object-contain border rounded cursor-pointer p-2">
+
+                    <img src="https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/3.webp"
+                        class="thumb w-20 h-20 object-contain border rounded cursor-pointer p-2">
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+            <div>
+
+                <p class="text-sm text-gray-500 uppercase">
+                    Fragrances
+                </p>
+
+                <h1 class="text-4xl font-bold mt-2 " id="title">
+                    Calvin Klein CK One
+                </h1>
+
+                <p class="text-gray-500 mt-1">
+                    Brand :
+                    <span class="font-semibold text-black" id="brand">
+                        Calvin Klein
+                    </span>
+                </p>
+
+                <!-- Rating -->
+                <div class="flex items-center mt-4">
+
+                    <span class="text-yellow-500 text-xl">
+                        ★★★★☆
+                    </span>
+
+                    <span class="ml-2 text-gray-600" id="rating">
+                        4.37 (3 Reviews)
+                    </span>
+
+                </div>
+
+                <!-- Price -->
+                <div class="mt-6 flex items-center gap-4">
+
+                    <h2 class="text-4xl font-bold text-green-600" id="price">
+                        $49.99
+                    </h2>
+
+                    <span class="line-through text-gray-400" id="before-price">
+                        $50.95
+                    </span>
+
+                    <span class="bg-red-500 text-white px-2 py-1 rounded text-sm">
+                        1.89% OFF
+                    </span>
+
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-600 mt-6 leading-7">
+                    CK One by Calvin Klein is a classic unisex fragrance,
+                    known for its fresh and clean scent. It's a versatile
+                    fragrance suitable for everyday wear.
+                </p>
+
+                <!-- Stock -->
+                <div class="mt-5">
+
+                    <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                        In Stock (29)
+                    </span>
+
+                </div>
+
+                <!-- Tags -->
+                <div class="mt-5 flex gap-2">
+
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">
+                        Fragrances
+                    </span>
+
+                    <span class="bg-gray-200 px-3 py-1 rounded-full text-sm">
+                        Perfumes
+                    </span>
+
+                </div>
+
+                <!-- Quantity -->
+                <div class="mt-6">
+
+                    <label class="font-semibold">
+                        Quantity
+                    </label>
+
+                    <input type="number"
+                        value="9"
+                        class="border rounded w-24 p-2 mt-2 block">
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-4 mt-8">
+
+                    <button
+                        class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800">
+                        Add To Cart
+                    </button>
+
+                    <button
+                        class="border border-black px-8 py-3 rounded-lg hover:bg-black hover:text-white">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Extra Information -->
+
+        <div class="grid md:grid-cols-3 gap-5 mt-8">
+
+            <div class="bg-white rounded-lg shadow p-5">
+
+                <h3 class="font-bold text-lg">
+                    Shipping
+                </h3>
+
+                <p class="text-gray-600 mt-2">
+                    Ships overnight
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+
+                <h3 class="font-bold text-lg">
+                    Warranty
+                </h3>
+
+                <p class="text-gray-600 mt-2">
+                    1 Week Warranty
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+
+                <h3 class="font-bold text-lg">
+                    Return Policy
+                </h3>
+
+                <p class="text-gray-600 mt-2">
+                    90 Days Return Policy
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Product Details -->
+
+        <div class="bg-white rounded-lg shadow mt-8 p-6">
+
+            <h2 class="text-2xl font-bold mb-5">
+                Product Details
+            </h2>
+
+            <table class="w-full">
+
+                <tr class="border-b">
+                    <td class="py-3 font-semibold">SKU</td>
+                    <td>FRA-CAL-CAL-006</td>
+                </tr>
+
+                <tr class="border-b">
+                    <td class="py-3 font-semibold">Weight</td>
+                    <td>7 kg</td>
+                </tr>
+
+                <tr class="border-b">
+                    <td class="py-3 font-semibold">Dimensions</td>
+                    <td>29.36 × 27.76 × 20.72</td>
+                </tr>
+
+                <tr>
+                    <td class="py-3 font-semibold">Minimum Order</td>
+                    <td>9 Pieces</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- Reviews -->
+
+        <div class="bg-white rounded-lg shadow mt-8 p-6">
+
+            <h2 class="text-2xl font-bold mb-6">
+                Customer Reviews
+            </h2>
+
+            <!-- Review -->
+
+            <div class="border-b pb-4 mb-4">
+
+                <h3 class="font-semibold">
+                    Layla Young
+                </h3>
+
+                <p class="text-yellow-500">
+                    ★★☆☆☆
+                </p>
+
+                <p class="text-gray-600 mt-2">
+                    Very disappointed!
+                </p>
+
+            </div>
+
+            <div class="border-b pb-4 mb-4">
+
+                <h3 class="font-semibold">
+                    Daniel Cook
+                </h3>
+
+                <p class="text-yellow-500">
+                    ★★★★☆
+                </p>
+
+                <p class="text-gray-600 mt-2">
+                    Fast shipping!
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3 class="font-semibold">
+                    Jacob Cooper
+                </h3>
+
+                <p class="text-yellow-500">
+                    ★★★☆☆
+                </p>
+
+                <p class="text-gray-600 mt-2">
+                    Not as described!
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Thumbnail Script -->
+    <script>
+
+        const mainImage = document.getElementById("mainImage");
+
+        document.querySelectorAll(".thumb").forEach(img => {
+
+            img.addEventListener("click", function () {
+
+                mainImage.src = this.src;
+
+            });
+
+        });
+
+    </script>
+
+<script src="productDetail.js"></script>
+</body>
+</html>
