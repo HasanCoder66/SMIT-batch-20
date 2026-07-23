@@ -18,12 +18,12 @@
 // .then((result) => {
 //     // console.log(result.products);
 
-    result.products.map((item, idx) => {
-        console.log(item);
+//     result.products.map((item, idx) => {
+//         console.log(item);
         
-    })
+//     })
     
-})
+// })
 
 
 // console.log("hello");
