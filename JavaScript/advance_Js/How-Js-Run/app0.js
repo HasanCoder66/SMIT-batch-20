@@ -1,6 +1,15 @@
-console.log(`Value of X is:`, x)
+// console.log(`Value of X is:`, a)
 
-var x = 1;
+// var a = 1;
 
 
-console.log(x)
+// console.log(a)
+
+
+// let and const 
+
+// console.log(a);
+
+
+
+// let a = 12;
