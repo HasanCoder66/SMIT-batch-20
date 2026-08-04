@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
