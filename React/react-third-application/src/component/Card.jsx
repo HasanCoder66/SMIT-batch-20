@@ -1,14 +1,15 @@
 import React from 'react'
 
-const Card = ({username, about}) => {
-    console.log(username, about);
+// {username, about}
+const Card = React.memo(() => {
+    console.log("card rerender howa -->");
     
   return (
     <div>
-      <h1>{username}</h1>
-      <p>{about}</p>
+      {/* <h1>{username}</h1>
+      <p>{about}</p> */}
     </div>
   )
-}
+})
 
 export default Card
