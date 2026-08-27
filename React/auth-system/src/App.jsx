@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Dashboard/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserDetailPage from "./pages/UserDetailPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/register" element={<Register />} />
 
           <Route path="/" element={<Home />} />
+          <Route path="/user/:id" element={<UserDetailPage />} />
         </Routes>
       </BrowserRouter>
     </>

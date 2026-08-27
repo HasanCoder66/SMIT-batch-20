@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../../components/Card'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -52,7 +53,7 @@ useEffect(() => {
       </div>
 
       <div className='flex justify-evenly gap-5 flex-wrap'>
-    {users.map((user) => (<Card key={user.id} data={user} />))}
+    {users.map((user) => (<Link to={user.id} key={user.id}><Card  data={user} /></Link>))}
 </div>
     </div>
   )
