@@ -9,6 +9,9 @@ import Jobs from "./pages/Jobs";
 import Profile from "./pages/Profile";
 import Course from "./pages/Course";
 import CourseDetailPage from "./pages/CourseDetailPage";
+import CourseStudent from "./pages/CourseStudent";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Counter from "./pages/Counter";
 
 const App = () => {
   return (
@@ -20,10 +23,12 @@ const App = () => {
 
         <Route path="/course" element={<Course />} />
         <Route path="/course/:courseName" element={<CourseDetailPage />} />
+        <Route path="/course/:courseName/student" element={<CourseStudent />} />
+        <Route path="/counter" element={<Counter />} />
 
 
         {/* nested routing start  */}
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
           <Route path="users" element={<Users />} />
           <Route path="jobs" element={<Jobs />} />
           <Route path="profile" element={<Profile />} />
@@ -69,5 +74,7 @@ export default App;
 // Dynamic parameter kaise receive karenge?
 
 
+// Protected Routing -->
 // Dynamic Nested Routing -->
-Protected Routing -->
+
+

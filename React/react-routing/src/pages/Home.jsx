@@ -8,6 +8,9 @@ const Home = () => {
       <h1>This is a Home Page
 
       </h1>
+
+
+      
     </div>
   )
 }
