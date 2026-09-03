@@ -41,7 +41,7 @@ const Login = () => {
     <div>
       <h1>Login Page</h1>
 
-      console.log("hellow");
+      console.log("hellow")
       
 
       <div>
