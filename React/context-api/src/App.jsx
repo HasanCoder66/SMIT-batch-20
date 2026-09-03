@@ -7,15 +7,15 @@ import { ThemeProvider } from "./context/ThemeContext";
 const App = () => {
   return (
     <>
-     {/* <AppProvider> */}
-     <ThemeProvider>
+     <AppProvider>
+     {/* <ThemeProvider> */}
         <Navbar />
-        </ThemeProvider>
-      <div className="text-red-700">
+        {/* </ThemeProvider> */}
+      <div className="text-red-700 md:bg-red-700">
 
         <User />
       </div>
-      {/* </AppProvider> */}
+      </AppProvider>
     </>
   );
 };
