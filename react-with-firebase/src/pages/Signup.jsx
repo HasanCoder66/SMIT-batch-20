@@ -1,38 +1,69 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import app from "../firebase/config.js";
-
+import { collection, addDoc, setDoc } from "firebase/firestore";
+import app, { db } from "../firebase/config.js";
 const auth = getAuth(app);
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [age, setAge] = useState("");
+  const [username, setUsername] = useState("");
 
-  const signupHandler = () => {
+  const signupHandler = async () => {
     // console.log("signup ker raha hon..");
+
+    try {
+      let { user } = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+      console.log(user);
+
+      if (user) {
+        try {
+          const docRef = await addDoc(collection(db, "users"), {
+           email : email,
+            password,
+            age,
+            username
+          });
+          console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+      }
+
+      console.log("user created!");
+    } catch (error) {
+      const { code, message } = error;
+      console.log(code);
+      console.log(message);
+    }
 
     // console.log(email, password);
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        console.log("user crediential",userCredential);
-        
-        const user = userCredential.user;
-        // ...
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed up
+    //     console.log("user crediential",userCredential);
 
-        console.log(user);
-        
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    //     const user = userCredential.user;
+    //     // ...
 
-        console.log(errorCode, errorMessage);
-        
-        // ..
-      });
+    //     console.log(user);
+
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+
+    //     console.log(errorCode, errorMessage);
+
+    //     // ..
+    //   });
   };
   return (
     <div>
@@ -51,6 +82,20 @@ const Signup = () => {
           onChange={(e) => setPassword(e.target.value)}
           type="password"
           placeholder="Enter your password"
+        />
+
+        <input
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+          type="number"
+          placeholder="Enter your Age"
+        />
+        <br />
+        <input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          type="text"
+          placeholder="Enter your username"
         />
 
         <button onClick={signupHandler}>Signup</button>
