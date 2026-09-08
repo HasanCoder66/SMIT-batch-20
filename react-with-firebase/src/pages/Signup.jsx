@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc, setDoc } from "firebase/firestore";
 import app, { db } from "../firebase/config.js";
+import { uploadImageToCloudinary } from "../cloudinary/cloudinary.js";
 const auth = getAuth(app);
 
 const Signup = () => {
@@ -10,7 +11,10 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [age, setAge] = useState("");
   const [username, setUsername] = useState("");
+  const [profileImage, setProfileImage] = useState(null);
 
+  console.log(profileImage);
+  
   const signupHandler = async () => {
     // console.log("signup ker raha hon..");
 
@@ -23,12 +27,18 @@ const Signup = () => {
       console.log(user);
 
       if (user) {
+
+       const imageUrl =  await uploadImageToCloudinary(profileImage);
+
+       console.log(imageUrl);
+       
         try {
           const docRef = await addDoc(collection(db, "users"), {
            email : email,
             password,
             age,
-            username
+            username,
+            profileImage : imageUrl
           });
           console.log("Document written with ID: ", docRef.id);
         } catch (e) {
@@ -96,6 +106,11 @@ const Signup = () => {
           onChange={(e) => setUsername(e.target.value)}
           type="text"
           placeholder="Enter your username"
+        />
+        <br />
+        <input
+          onChange={(e) => setProfileImage(e.target.files[0])}
+          type="file"
         />
 
         <button onClick={signupHandler}>Signup</button>

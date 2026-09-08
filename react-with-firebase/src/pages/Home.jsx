@@ -4,7 +4,7 @@ import { getAuth, signOut } from "firebase/auth";
 import app, { db } from "../firebase/config";
 import UserCard from "../component/UserCard";
 import EditUserModal from "../component/EditUserModal";
-
+import ChipDelete from '../component/ChipDelete'
 const auth = getAuth();
 
 const Home = () => {
@@ -56,6 +56,8 @@ const Home = () => {
       </div>
 
       {isEditUser && <EditUserModal editUserData={editUserData} setIsEditUser={setIsEditUser}  />}
+
+      <ChipDelete />
     </div>
   );
 };

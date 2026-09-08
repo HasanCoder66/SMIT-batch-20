@@ -43,6 +43,9 @@ const UserCard = ({ data, setIsEditUser, setEditUserData }) => {
   return (
     <div>
       <div id="info">
+        <img src={data.profileImage || ""} alt="user image nhii haii" height={"200px"} width={"200px"} style={{
+          borderRadius:"50%"
+        }} />
         <h1>Username : {data.username}</h1>
         <p>Email : {data.email}</p>
         <p>Age : {data.age}</p>
