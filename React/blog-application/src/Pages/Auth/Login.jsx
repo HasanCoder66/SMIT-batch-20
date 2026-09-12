@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { Box, Paper } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -8,6 +8,8 @@ import { ToastContainer, toast } from "react-toastify";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { auth } from "../../firebase/config.js";
+import { Link } from "react-router-dom";
+import SignInWithGoogle from "../../components/SignInWithGoogle.jsx";
 
 const Login = () => {
   const [form, setForm] = useState({
@@ -101,17 +103,23 @@ const Login = () => {
               value={form.password}
             />
 
-            <Box sx={{}} className="flex justify-center mb-5 ">
-              {/* < /> */}
-              {/* <Button
+            {/* <Box sx={{}} className="flex justify-center mb-5 ">
+              
+              <Button
                 handler={LoginWithGoogleHandler}
                 title={"Login with Google"}
                 icon={<GoogleIcon />}
-              /> */}
-            </Box>
+              />
+            </Box> */}
+
+            <SignInWithGoogle title="login with google" />
             <Box sx={{}} className="flex justify-center ">
               <Button handler={LoginHandler} title={"Login"} />
             </Box>
+
+             <Link to={"/signup"}><Typography sx={{
+                margin: "10px 0px"
+              }} className="text-center ">Go to Signup page</Typography></Link>
           </Box>
         </Paper>
       </Box>

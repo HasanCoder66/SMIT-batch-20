@@ -1,11 +1,10 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Signup from "./Pages/Auth/Signup";
 import Login from "./Pages/Auth/Login";
+import Home from "./Pages/Home";
+import Blog from "./Pages/Blog";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
 
@@ -15,6 +14,10 @@ function App() {
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+
+
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<ProtectedRoute><Blog /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </>
