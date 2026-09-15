@@ -19,7 +19,8 @@ import SignInWithGoogle from "../../components/SignInWithGoogle.jsx";
   await setDoc(doc(db, "users", data.uid), {
     email : data.email,
     name : data.displayName ? data.displayName : name,
-    photoUrl : data.photoURL ? data.photoURL : ""
+    photoUrl : data.photoURL ? data.photoURL : "",
+    role: "user"
   });
   
 
@@ -105,19 +106,22 @@ const Signup = () => {
             <Input
               handler={handleInputChange}
               label={"Enter your username"}
-              type={"username"}
+              type={"text"}
+              id="username"
               value={form.username}
             />
             <Input
               handler={handleInputChange}
               label={"Enter your Email"}
               type={"email"}
+              id="email"
               value={form.email}
             />
             <Input
               handler={handleInputChange}
               label={"Enter your Password"}
               type={"password"}
+              id="password"
               value={form.password}
             />
 

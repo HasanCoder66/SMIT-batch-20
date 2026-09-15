@@ -6,9 +6,10 @@ import { Box } from '@mui/material';
 import { ToastContainer, toast } from "react-toastify";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { saveDataIntoDB } from '../Pages/Auth/Signup.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const SignInWithGoogle = ({title}) => {
-
+const navigate = useNavigate() 
 
       const signupWithGoogleHandler = async () => {
     console.log("signup chl raha haii..");
@@ -22,6 +23,7 @@ const SignInWithGoogle = ({title}) => {
       saveDataIntoDB("",response.user)
       if (response.user) {
         toast.success("user signup successfully!");
+         navigate("/")
       }
     } catch (error) {
       toast.error(error.message);

@@ -3,6 +3,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/config.js";
 import { Navigate, useNavigate } from "react-router-dom";
 
+
+export let userId = null
+
 const ProtectedRoute = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -52,6 +55,7 @@ const ProtectedRoute = ({ children }) => {
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
 
+        userId = user.uid
         console.log("user", user);
         setUser(user)
 

@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { auth } from "../../firebase/config.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate,  } from "react-router-dom";
 import SignInWithGoogle from "../../components/SignInWithGoogle.jsx";
 
 const Login = () => {
@@ -16,6 +16,8 @@ const Login = () => {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate()
 
   const handleInputChange = (key, value) => {
     console.log("handler working...", value);
@@ -38,6 +40,7 @@ const Login = () => {
 
       if (response.user) {
         toast.success("user Login successfully!");
+        navigate("/")
       }
     } catch (error) {
       console.log(error.message);
