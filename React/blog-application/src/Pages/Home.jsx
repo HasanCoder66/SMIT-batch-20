@@ -10,6 +10,8 @@ import { db } from '../firebase/config';
 const Home = () => {
     const [allBlogs, setAllBlogs] = React.useState([]);
 
+    console.log(allBlogs);
+    
       const getBlogsData = async () => {
     try {
       const q = query(collection(db, "blogs"));
@@ -25,7 +27,8 @@ const Home = () => {
       }
    ));
 
-   setAllBlogs(blogs)
+   setAllBlogs(blogs);
+
     } catch (error) {
       console.log(error.message);
     }
@@ -35,12 +38,17 @@ const Home = () => {
     getBlogsData();
   }, []);
   return (
-  // <Navbar />
+    
+    <>
+    <Navbar />
+  
+  
+<h1 className='font-bold text-2xl text-center  mt-5 underline'>All Blogs!</h1>
 
-  <>
-  <div className='flex flex-wrap justify-between gap-5'>
+  <div className='flex flex-wrap justify-evenly gap-5 p-5'>
 
-    {allBlogs.length > 0 ? allBlogs.map((blog) => (<BlogCard />)) : "blog finding"}
+      {allBlogs.length > 0 ? allBlogs.map((blog) => (<BlogCard setAllBlogs={setAllBlogs} getBlogsData={getBlogsData}  data={blog} />)) : "blog finding"}
+
 
   </div>
   

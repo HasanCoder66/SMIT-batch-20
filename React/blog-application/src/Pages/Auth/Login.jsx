@@ -98,12 +98,14 @@ const Login = () => {
               label={"Enter your Email"}
               type={"email"}
               value={form.email}
+              id={"email"}
             />
             <Input
               handler={handleInputChange}
               label={"Enter your Password"}
               type={"password"}
               value={form.password}
+              id="password"
             />
 
             {/* <Box sx={{}} className="flex justify-center mb-5 ">
