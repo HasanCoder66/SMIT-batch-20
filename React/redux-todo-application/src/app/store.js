@@ -1,7 +1,27 @@
 import { configureStore } from '@reduxjs/toolkit'
-import todoReducer from '../features/todo/todoSlice.js'
+import rootReducer from '../redux/rootReducer.js'
+
+import {
+  persistStore,
+  persistReducer,
+} from "redux-persist";
+
+import storage from "redux-persist/lib/storage";
+
+const persistConfig = {
+  key: "root",
+  storage :storage.default,
+};
 
 
-export const store = configureStore({ reducer: {
-    todo : todoReducer
-} })
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const store = configureStore({ 
+    reducer: persistedReducer,
+     middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+})
+
+export const persistor = persistStore(store)

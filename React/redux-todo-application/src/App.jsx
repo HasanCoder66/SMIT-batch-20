@@ -9,7 +9,8 @@ const App = () => {
 
 
   const dispatch = useDispatch();
-  let todos = useSelector((state) => state.todo.todos);
+  let todos = useSelector((state) => state.todo.todos
+  );
 
   console.log(todos);
   
