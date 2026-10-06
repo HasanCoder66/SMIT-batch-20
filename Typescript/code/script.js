@@ -1,6 +1,6 @@
 "use strict";
 // let b = "janiii"
-Object.defineProperty(exports, "__esModule", { value: true });
+// Object.defineProperty(exports, "__esModule", { value: true });
 // let isAdmin = true
 // // isAdmin = "true"
 // // boolean , string , number , undefined , null 
@@ -31,11 +31,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // if(typeof a == "number"){
 //     a.toFixed()
 // }
-const foo = () => {
-    console.log("hello");
-    let value = 90;
-    return value;
-};
+// const foo = ():number => {
+//     console.log("hello");
+// let value = 90
+//     return value
+// }
 // type safety
 // function continousLoop () {
 //     while(true){
@@ -45,4 +45,43 @@ const foo = () => {
 // continousLoop()
 // console.log("mery function ke baad ka code");
 let val = "56";
-//# sourceMappingURL=script.js.map
+// console.log(val)
+// let num:number = 90;
+// if(num){
+//     num = 100
+// }
+// console.log(num);
+// let name = "sufiyan"
+// name = "abdullah"
+// let students:string[] = ["67", "89", "hasan"]
+// let nums:number[] = [67, 89]
+// let mixedArr:(number | string )[]  = [12, "23"]
+// tuples 
+// let arr:[number, string] = [12, "hasan"]
+// enum UserRoles {
+//     manager = "Manager",
+//     admin = "Admin"
+// }
+// enum StatusCodes {
+// not_found = 404,
+// success = 200,
+// resource_added = 201
+// }
+// // send response to frontend 
+// console.log(StatusCodes.not_found);
+let abc;
+let randomVal = "hasan";
+let myVar = 67;
+// function abc (arg:userVal){
+// }
+class bottle {
+    name;
+    price;
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+let b1 = new bottle("aquafina", 80);
+let b2 = new bottle("pakola", 50);
+console.log(b2);
