@@ -256,14 +256,121 @@ type userVal = string & {
 
 
 
-class bottle {
+// class bottle {
 
 
-constructor (public name:string , public price :number ){}
+// constructor (public name:string , public price :number ){}
+// }
+
+
+// let b1 = new bottle("aquafina", 80)
+// let b2 = new bottle("pakola", 50)
+
+// console.log(b2);
+
+
+
+
+// class Student {
+
+//     public name
+//     public email
+//     public age
+
+
+//     constructor(n:string, a:number, e:string){
+
+// this.name = n
+// this.age = a
+// this.email = e
+
+//     }
+// }
+
+
+// let s1 = new Student("Abdullah" , 18 , "abdullah@gmail.com")
+// let s2 = new Student("Uzair" , 22, "uzair@gmail.com")
+
+// // let s3 = new Student()
+
+// console.log(s2);
+// console.log(s2);
+// console.log(s3);
+
+
+
+
+
+
+
+class Bottle {
+    constructor(public readonly name :string, public price : number, public material:string){
+
+       this.name = "jaani"
+    }
+
 }
 
 
-let b1 = new bottle("aquafina", 80)
-let b2 = new bottle("pakola", 50)
 
-console.log(b2);
+let b1 = new Bottle("Aquafina" , 60, "plastic")
+// b1.name = "kuch bii."
+
+console.log(b1);
+
+
+// class PlasticBottle extends Bottle {
+// constructor(protected name :string, public price : number, public material:string){
+// super(name, price , material)
+
+
+// }
+
+// }
+
+
+
+
+// let plasticb1 = new PlasticBottle("Aquafina" , 70, "plastic")
+
+
+// console.log(plasticb1);
+
+
+// let b1 = new Bottle("Pakola", 60, "Plastic");
+
+
+// let b1 = new Bottle("Nestle", 60, "Plastic");
+
+// console.log(b1);
+
+
+
+
+
+
+// optional properties
+
+
+
+interface UserMera {
+    email : string,
+    age : number,
+    gender? : string
+}
+
+
+let user = {
+    email : "codermhasan@gmail.com",
+    age : 23,
+    
+
+}
+
+
+
+function foo (a:string = "56"):void{
+
+}
+
+foo("12")

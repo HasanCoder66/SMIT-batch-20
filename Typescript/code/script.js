@@ -1,6 +1,5 @@
 "use strict";
 // let b = "janiii"
-// Object.defineProperty(exports, "__esModule", { value: true });
 // let isAdmin = true
 // // isAdmin = "true"
 // // boolean , string , number , undefined , null 
@@ -74,14 +73,46 @@ let randomVal = "hasan";
 let myVar = 67;
 // function abc (arg:userVal){
 // }
-class bottle {
+// class bottle {
+// constructor (public name:string , public price :number ){}
+// }
+// let b1 = new bottle("aquafina", 80)
+// let b2 = new bottle("pakola", 50)
+// console.log(b2);
+// class Student {
+//     public name
+//     public email
+//     public age
+//     constructor(n:string, a:number, e:string){
+// this.name = n
+// this.age = a
+// this.email = e
+//     }
+// }
+// let s1 = new Student("Abdullah" , 18 , "abdullah@gmail.com")
+// let s2 = new Student("Uzair" , 22, "uzair@gmail.com")
+// // let s3 = new Student()
+// console.log(s2);
+// console.log(s2);
+// console.log(s3);
+class Bottle {
     name;
     price;
-    constructor(name, price) {
+    material;
+    constructor(name, price, material) {
         this.name = name;
         this.price = price;
+        this.material = material;
+        this.name = "jaani";
     }
 }
-let b1 = new bottle("aquafina", 80);
-let b2 = new bottle("pakola", 50);
-console.log(b2);
+let b1 = new Bottle("Aquafina", 60, "plastic");
+// b1.name = "kuch bii."
+console.log(b1);
+let user = {
+    email: "codermhasan@gmail.com",
+    age: 23,
+};
+function foo(a = "56") {
+}
+foo("12");
