@@ -1,118 +1,246 @@
-"use strict";
-// let b = "janiii"
-// let isAdmin = true
-// // isAdmin = "true"
-// // boolean , string , number , undefined , null 
-// let val = 78
-// let user:null = null
-// // array, objects ,functions
-// // let numsArr:number[] = []
+// // let b = "janiii"
+// // let isAdmin = true
+// // // isAdmin = "true"
+// // // boolean , string , number , undefined , null 
+// // let val = 78
+// // let user:null = null
+// // // array, objects ,functions
+// // // let numsArr:number[] = []
+// // // tuples 
+// // // let arr:string[] = ["123" , 34, true]
+// // // array ke konsy index pr kis type ka data ayega 
+// // // let values:[string, number, boolean] = ["saqib", 45 , true]
+// // // enums
+// // enum UserRoles {
+// //     guest = "GUEST",
+// //     admin = "ADMIN"
+// // }
+// // enum StatusCodes {
+// //     Not_Found = 404,
+// //     Abondoned = 410,
+// //     Success = 200,
+// // }
+// // console.log(UserRoles.guest);
+// // let a:unknown;
+// // // type narrowing 
+// // if(typeof a == "string"){
+// //     a.toLowerCase()
+// // }
+// // if(typeof a == "number"){
+// //     a.toFixed()
+// // }
+// // const foo = ():number => {
+// //     console.log("hello");
+// // let value = 90
+// //     return value
+// // }
+// // type safety
+// // function continousLoop () {
+// //     while(true){
+// //         console.log("janiii");
+// //     }
+// // }
+// // continousLoop()
+// // console.log("mery function ke baad ka code");
+// let val:string = "56"
+// // console.log(val)
+// // let num:number = 90;
+// // if(num){
+// //     num = 100
+// // }
+// // console.log(num);
+// // let name = "sufiyan"
+// // name = "abdullah"
+// // let students:string[] = ["67", "89", "hasan"]
+// // let nums:number[] = [67, 89]
+// // let mixedArr:(number | string )[]  = [12, "23"]
 // // tuples 
-// // let arr:string[] = ["123" , 34, true]
-// // array ke konsy index pr kis type ka data ayega 
-// // let values:[string, number, boolean] = ["saqib", 45 , true]
-// // enums
-// enum UserRoles {
-//     guest = "GUEST",
-//     admin = "ADMIN"
+// // let arr:[number, string] = [12, "hasan"]
+// // enum UserRoles {
+// //     manager = "Manager",
+// //     admin = "Admin"
+// // }
+// // enum StatusCodes {
+// // not_found = 404,
+// // success = 200,
+// // resource_added = 201
+// // }
+// // // send response to frontend 
+// // console.log(StatusCodes.not_found);
+// let abc:unknown;
+// // abc = "janii"
+// // // type narrowing..
+// // if(typeof abc == "string"){
+// //     // abc. 
+// // }
+// // if(typeof abc == "boolean"){
+// // abc = false
+// // }
+// // interface UserObj {
+// //     email : string,
+// //     password : number,
+// //     age : number
+// // }
+// // const myObj = {
+// //     email :"codermhasan@gmail.com",
+// //     password : 4567890,
+// //     age : 56
+// // }
+// // function foo (obj : UserObj):void{
+// // }
+// // foo()
+// interface User {
+//     email : string,
+//     password : string
 // }
-// enum StatusCodes {
-//     Not_Found = 404,
-//     Abondoned = 410,
-//     Success = 200,
+// // interface Admin extends User{
+// // isAdmin : boolean
+// // }
+// interface  User{
+// isAdmin : boolean
 // }
-// console.log(UserRoles.guest);
-// let a:unknown;
-// // type narrowing 
-// if(typeof a == "string"){
-//     a.toLowerCase()
+// // function userCall (obj:User){
+// // obj.
+// // }
+// // type aliases
+// type val = string | number | boolean;
+// let randomVal:string = "hasan"
+// type arg = string | number
+// let myVar:arg = 67 
+// type userVal = string & {
+//     getUserData():string
 // }
-// if(typeof a == "number"){
-//     a.toFixed()
-// }
-// const foo = ():number => {
-//     console.log("hello");
-// let value = 90
-//     return value
-// }
-// type safety
-// function continousLoop () {
-//     while(true){
-//         console.log("janiii");
+// // function abc (arg:userVal){
+// // }
+// // class bottle {
+// // constructor (public name:string , public price :number ){}
+// // }
+// // let b1 = new bottle("aquafina", 80)
+// // let b2 = new bottle("pakola", 50)
+// // console.log(b2);
+// // class Student {
+// //     public name
+// //     public email
+// //     public age
+// //     constructor(n:string, a:number, e:string){
+// // this.name = n
+// // this.age = a
+// // this.email = e
+// //     }
+// // }
+// // let s1 = new Student("Abdullah" , 18 , "abdullah@gmail.com")
+// // let s2 = new Student("Uzair" , 22, "uzair@gmail.com")
+// // // let s3 = new Student()
+// // console.log(s2);
+// // console.log(s2);
+// // console.log(s3);
+// class Bottle {
+//     constructor(public readonly name :string, public price : number, public material:string){
+//        this.name = "jaani"
 //     }
 // }
-// continousLoop()
-// console.log("mery function ke baad ka code");
-let val = "56";
-// console.log(val)
-// let num:number = 90;
-// if(num){
-//     num = 100
+// let b1 = new Bottle("Aquafina" , 60, "plastic")
+// // b1.name = "kuch bii."
+// console.log(b1);
+// // class PlasticBottle extends Bottle {
+// // constructor(protected name :string, public price : number, public material:string){
+// // super(name, price , material)
+// // }
+// // }
+// // let plasticb1 = new PlasticBottle("Aquafina" , 70, "plastic")
+// // console.log(plasticb1);
+// // let b1 = new Bottle("Pakola", 60, "Plastic");
+// // let b1 = new Bottle("Nestle", 60, "Plastic");
+// // console.log(b1);
+// // optional properties
+// interface UserMera {
+//     email : string,
+//     age : number,
+//     gender? : string
 // }
-// console.log(num);
-// let name = "sufiyan"
-// name = "abdullah"
-// let students:string[] = ["67", "89", "hasan"]
-// let nums:number[] = [67, 89]
-// let mixedArr:(number | string )[]  = [12, "23"]
-// tuples 
-// let arr:[number, string] = [12, "hasan"]
-// enum UserRoles {
-//     manager = "Manager",
-//     admin = "Admin"
+// let user = {
+//     email : "codermhasan@gmail.com",
+//     age : 23,
 // }
-// enum StatusCodes {
-// not_found = 404,
-// success = 200,
-// resource_added = 201
+// function foo (a:string = "56"):void{
 // }
-// // send response to frontend 
-// console.log(StatusCodes.not_found);
-let abc;
-let randomVal = "hasan";
-let myVar = 67;
-// function abc (arg:userVal){
+// foo("12")
+// classes
+// class User {
+//     protected email
+//     public pass
+//     constructor(e:string, p:string){
+//         this.email = e
+//         this.pass = p
+//     }
+//     getUserData(){
+//         console.log("user data milgaya", this.email);
+//     }
 // }
-// class bottle {
-// constructor (public name:string , public price :number ){}
+// class Admin extends User {
+//     protected isAdmin
+//     constructor(e:string , p:string){
+//         super(e, p)
+//         this.email = "ali@gmail.com"
+//         this.isAdmin = true
+//     }
 // }
-// let b1 = new bottle("aquafina", 80)
-// let b2 = new bottle("pakola", 50)
-// console.log(b2);
+// let a1 = new Admin("saim@gmail.com", "saim123" )
+// let u2 = new User("saim@gmail.com", "saim123" )
+// // u2.email = "ali@gmail.com"
+// console.log(a1);
 // class Student {
-//     public name
-//     public email
-//     public age
-//     constructor(n:string, a:number, e:string){
-// this.name = n
-// this.age = a
-// this.email = e
+//     constructor(public r:number, public gender?:string){ }
+//     // public get rollNum() : number {
+//     //     return this.r
+//     // }
+//    public set setRollNum(v : number) {
+//     this.r = v;
+//    }
+// }
+// let s1 = new Student(456)
+// // s1.readRollNum()
+// // s1.setRollNum(786)
+// // console.log(s1.rollNum);
+// s1.setRollNum = 45
+// console.log(s1);
+// s1.rollNum = ""
+// class Random {
+//     static value = 78
+//    static myRandomMehtod (){
+//         return Math.random()
 //     }
 // }
-// let s1 = new Student("Abdullah" , 18 , "abdullah@gmail.com")
-// let s2 = new Student("Uzair" , 22, "uzair@gmail.com")
-// // let s3 = new Student()
-// console.log(s2);
-// console.log(s2);
-// console.log(s3);
-class Bottle {
-    name;
-    price;
-    material;
-    constructor(name, price, material) {
-        this.name = name;
-        this.price = price;
-        this.material = material;
-        this.name = "jaani";
+// console.log(Random.myRandomMehtod());
+// abstract class PakanaHai {
+//     constructor(public kiapakanahai:string, public gasNam: string){}
+// }
+// class DaalBanado extends PakanaHai {
+//     constructor(foodName:string, gasName:string){
+//         super(foodName, gasName)
+//     }
+// }
+// let daalPakgai = new DaalBanado("chany ke daal", "LPG")
+// console.log(daalPakgai);
+// OOP 
+// procedural programming
+// object oriented programming
+// functional programming
+class User {
+    constructor(email) {
+        this.email = email;
+    }
+    login(email) {
+        if (!email)
+            return;
+        else {
+            console.log("user login hogiya..");
+        }
     }
 }
-let b1 = new Bottle("Aquafina", 60, "plastic");
-// b1.name = "kuch bii."
-console.log(b1);
-let user = {
-    email: "codermhasan@gmail.com",
-    age: 23,
-};
-function foo(a = "56") {
+class Recruiter extends User {
+    login(password) { }
 }
-foo("12");
+let r1 = new Recruiter("recruiter@gmail.com");
+console.log(r1);
+export {};
