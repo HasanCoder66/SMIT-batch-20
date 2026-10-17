@@ -1,4 +1,6 @@
+"use strict";
 // // // let b = "janiii"
+Object.defineProperty(exports, "__esModule", { value: true });
 // // // let isAdmin = true
 // // // // isAdmin = "true"
 // // // // boolean , string , number , undefined , null 
@@ -313,17 +315,24 @@
 // console.log("string -->",num);
 // let a :number | null | undefined = 56
 // a!.
-function foo(a, b) {
-    if (typeof a == "string") {
-        console.log(a);
-        let n1 = Number(a);
-        console.log(n1);
-    }
-    if (typeof b == "number") {
-        console.log(b);
-        let str = String(b);
-        console.log(str);
-    }
+// function foo (a:string , b:number){
+//     if(typeof a == "string"){
+//         console.log(a);
+//         let n1 = Number(a)
+//         console.log(n1);
+//     }
+//     if(typeof b == "number"){
+//         console.log(b);
+//         let str = String(b)
+//         console.log(str);
+//     }
+// }
+// foo("45", 89)
+class User {
+    admin = true;
 }
-foo("45", 89);
-export {};
+class Admin extends User {
+    admin = false;
+}
+let a1 = new Admin();
+console.log(a1);

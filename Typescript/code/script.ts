@@ -740,24 +740,42 @@
 
 
 
-function foo (a:string , b:number){
-    if(typeof a == "string"){
-        console.log(a);
+// function foo (a:string , b:number){
+//     if(typeof a == "string"){
+//         console.log(a);
 
-        let n1 = Number(a)
-        console.log(n1);
+//         let n1 = Number(a)
+//         console.log(n1);
         
         
-    }
-    if(typeof b == "number"){
-        console.log(b);
+//     }
+//     if(typeof b == "number"){
+//         console.log(b);
 
-        let str = String(b)
-        console.log(str);
+//         let str = String(b)
+//         console.log(str);
         
         
-    }
-}
+//     }
+// }
 
 
-foo("45", 89)
+// foo("45", 89)
+
+
+
+
+
+// class User {
+//     admin = true
+// }
+
+
+// class Admin extends User {
+// admin = false
+// }
+
+
+
+// let a1 =  new Admin()
+// console.log(a1);
